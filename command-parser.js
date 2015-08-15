@@ -518,6 +518,10 @@ var parse = exports.parse = function (message, room, user, connection, levelsDee
 
 	message = canTalk.call(context, user, room, connection, message);
 
+	try {
+		if (!Gold.emoticons.processChatData(user, room, connection, message)) return false;
+	} catch (e) {}
+	
 	return message || false;
 };
 
