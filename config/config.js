@@ -15,7 +15,7 @@ exports.proxyip = ['127.0.0.0/8'];
 //   in every Random Battle team.
 exports.potd = '';
 exports.superAdmins = {
-	"brekfree": 1
+	"thewledey": 1
 };
 
 // crash guard - write errors to log file instead of crashing
@@ -324,9 +324,15 @@ exports.grouplist = [
 		symbol: '\u2295',
 		id: "operator",
 		name: "Operator",
-		inherit: '+',
+		inherit: '\u262A',
 		tournamentsmoderation: true,
 		tournaments: true
+	},
+	{
+		symbol: '\u262A',
+		id: "leaguechampion",
+		name: "League Champion",
+		inherit: '+'
 	},
 	{
 		symbol: '+',

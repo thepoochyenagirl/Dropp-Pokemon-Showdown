@@ -278,7 +278,7 @@ exports.commands = {
 		if (!target || target.length > 1) return this.sendReply('Debes especificar un caracter como simbolo.');
 		if (target.match(/[A-Za-z0-9\d]+/g)) return this.sendReply('Tu simbolo no puede ser un caracter alfanumerico.');
 		if (!user.can('customsymbol')) {
-			if ('?!$+\u2605%@\u2295&~#'.indexOf(target) >= 0) return this.sendReply('No tienes permiso para elegir un rango como simbolo');
+			if ('?!$+\u262A\u2605%@\u2295&~#'.indexOf(target) >= 0) return this.sendReply('No tienes permiso para elegir un rango como simbolo');
 		}
 		user.getIdentity = function (roomid) {
 			if (this.locked) {
