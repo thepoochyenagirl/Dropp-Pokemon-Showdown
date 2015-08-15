@@ -332,7 +332,8 @@ exports.grouplist = [
 		symbol: '\u262A',
 		id: "leaguechampion",
 		name: "League Champion",
-		inherit: '+'
+		inherit: '+',
+		globalonly: true
 	},
 	{
 		symbol: '+',
