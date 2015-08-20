@@ -371,20 +371,20 @@ function clean(string) {
 var cmds = {
 	tourhelp: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<font size = 2>Sistema de torneos  clásico</font><br />' +
-						'Sistema de torneos clásico. Disponible para las salas, permitiendo a los usuarios con auth (+ % @ # & ~) crearlos y moderarlos.<br />' +
+		this.sendReplyBox('<center><font size = 2><h3>Sistema de torneos</h3></font><br />' +
+						' Disponible para las salas, permitiendo a los usuarios con auth (+ % @ # & ~) crearlos y moderarlos.<br />' +
 						'Los comandos son:<br />' +
-						'<ul><li>/newtour [formato], [tiempo] minutes - Inicia un torneo. Requiere: + % @ & ~</li>' +
+						'<ul><li>/newtour [Formato], [Tiempo] minutes - Inicia un torneo. Requiere: + % @ & ~</li>' +
 						'<li>/j - Comando para unirse a los tourneos.</li>' +
 						'<li>/l - comando para abandonar un torneo.</li>' +
-						'<li>/remind - recuerda a los usuarios con batallas pendientes.</li>' +
+						'<li>/remind - recuerda a los usuarios inactivos que tienen batallas pendientes.</li>' +
 						'<li>/vr - muestra el estado del torneo.</li>' +
 						'<li>/fl [usuario] - Fuerza a un usuario a salir de un torneo en fase de entrada.</li>' +
 						'<li>/dq [usuario] - Descalifica a un usuario.</li>' +
-						'<li>/replace [usuario1], [usuario2] - Comando para reemplazar.</li>' +
+						'<li>/replace [usuario1], [usuario2] - reemplaza a un Usuario.</li>' +
 						'<li>/invalidate - Deniega la validez de una batalla.</li>' +
 						'<li>/endtour - Cancela el torneo.</li>' +
-						'</ul>');
+						'</ul></center>');
 	},
 	
 	createtour: 'newtour',
@@ -400,9 +400,9 @@ var cmds = {
 		if (tour[rid] && tour[rid].status != 0) return this.sendReply('Ya hay un torneo en curso.');
 		if (War.getTourData(room.id)) return this.sendReply("Ya había una guerra en esta sala.");
 		if (teamTour.getTourData(room.id)) return this.sendReply("Ya había un torneo de equipos en esta sala.");
-		if (!target) return this.sendReply('El comando correcto es: /newtour formato, tamano');
+		if (!target) return this.sendReply('El comando correcto es: /newtour formato, tiempo');
 		var targets = tour.splint(target);
-		if (targets.length != 2) return this.sendReply('El comando correcto es: /newtour formato, tamano');
+		if (targets.length != 2) return this.sendReply('El comando correcto es: /newtour formato, tiempo');
 		var tierMatch = false;
 		var tempTourTier = '';
 		for (var i = 0; i < tour.tiers.length; i++) {
@@ -426,7 +426,7 @@ var cmds = {
 		else {
 			targets[1] = parseInt(targets[1]);
 		}
-		if (isNaN(targets[1])) return this.sendReply('El comando correcto es: /newtour formato, tamano');
+		if (isNaN(targets[1])) return this.sendReply('El comando correcto es: /newtour formato, tiempo');
 		if (targets[1] < 3) return this.sendReply('Los torneos deben tener al menos 3 participantes.');
 
 		this.parse('/endpoll');
