@@ -1733,16 +1733,16 @@ var commands = exports.commands = {
 		this.sendReplyBox("Uptime: <b>" + uptimeText + "</b>");
 	},
 
-	groups: function (target, room, user) {
+	grupos: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(
-			"$ <b>Destacado</b> - They can use ! commands like !groups<br />" +
-			"+ <b>Voice</b> - They can also join battles and talk during moderated chat<br />" +
-			"\u262A <b>League Champion</b> - They are League Champions<br />" +
-			"\u2295 <b>Operator</b> - They can also create and manage tournaments<br />" +
-			"\u00A5 <b>Youtuber</b> - They can also warn users<br />" +
-			"% <b>Driver</b> - The above, and they can mute. Global % can also lock users and check for alts<br />" +
-			"@ <b>Moderator</b> - The above, and they can ban users<br />" +
+			"$ <b>Destacado</b> - Pueden usar Comandos con ! como !gropus<br />" +
+			"+ <b>Voice</b> - Pueden hacer /newtour, pueden entrar a una sala de batalla y hablar durante la charla moderada <br />" +
+			"\u262A <b>League Champion</b> - Este rango se le otorga al Campeon de la Liga Dropp<br />" +
+			"\u2295 <b>Operator</b> - Pueden crear y Administrar Torneos<br />" +
+			"\u00A5 <b>Youtuber</b> - Pude darle warn a<br />" +
+			"% <b>Driver</b> - Pueden dark warn a Todo usuario<br />" +
+			"@ <b>Moderator</b> - Pueden darle ban a un Usuario<br />" +
 			"\u2605 <b>Player</b> - Especial rank only for battles. They can put the modchat and promote to room voiced<br />" +
 			"&amp; <b>Leader</b> - The above, and they can promote to moderator and force ties<br />" +
 			"# <b>Room Owner</b> - They are leaders of the room and can almost totally control it<br />" +
@@ -1773,9 +1773,9 @@ var commands = exports.commands = {
 		this.sendReplyBox("<a href=\"https://www.smogon.com/sim/staff_list\">Pok&eacute;mon Showdown Staff List</a>");
 	},
 
-	forums: function (target, room, user) {
+	foro: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox("<a href=\"https://www.smogon.com/forums/forums/pok%C3%A9mon-showdown.209\">Pok&eacute;mon Showdown Forums</a>");
+		this.sendReplyBox("<a href=\"http://dropp.boards.net/">Pok&eacute;mon Showdown Forums</a>");
 	},
 
 	suggestions: function (target, room, user) {
