@@ -24,7 +24,7 @@ exports.commands = {
 			"/deleteleague [id] - Comando para eliminar una liga.<br />"  +
 			"/editleague [id], [name/room], [data] - Edita la informacion de la liga.<br />"  +
 			"/setgymleader [id-league], [user], [id-medal] - Establece un usuario como miembro de la liga.<br />"  +
-			"/setgymleader [id-league], [user], [id-medal] - Establece un usuario como elite de la liga.<br />"  +
+			"/setelite [id-league], [user], [id-medal] - Establece un usuario como elite de la liga.<br />"  +
 			"/removegymleader [id-league], [id-medal] - Elimina un puesto de una liga.<br />"  +
 			"/darmedalla [user], (id) - Entrega una medalla.<br />"  +
 			"/quitarmedalla [user], (id) - Retira una medalla.<br />"
