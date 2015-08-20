@@ -1132,7 +1132,7 @@ User = (function () {
 			this.avatar = Config.customavatars[this.userid];
 		}
 
-		this.isStaff = (this.group in {'%':1, '@':1, '&':1, '~':1});
+		this.isStaff = (this.group in {"\u2295":1,'%':1, '@':1, '&':1, '~':1});
 		if (this.confirmed) {
 			this.autoconfirmed = this.confirmed;
 			this.locked = false;
@@ -1145,7 +1145,7 @@ User = (function () {
 	 */
 	User.prototype.setGroup = function (group, forceConfirmed) {
 		this.group = group.charAt(0);
-		this.isStaff = (this.group in {'%':1, '@':1, '&':1, '~':1});
+		this.isStaff = (this.group in {"\u2295":1,'%':1, '@':1, '&':1, '~':1});
 		Rooms.global.checkAutojoin(this);
 		if (this.registered) {
 			if (forceConfirmed || this.group !== Config.groupsranking[0]) {
