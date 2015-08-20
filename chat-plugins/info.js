@@ -1741,12 +1741,12 @@ var commands = exports.commands = {
 			"\u262A <b>League Champion</b> - Este rango se le otorga al Campeon de la Liga Dropp<br />" +
 			"\u2295 <b>Operator</b> - Pueden crear y Administrar Torneos<br />" +
 			"\u00A5 <b>Youtuber</b> - Pude darle warn a<br />" +
-			"% <b>Driver</b> - Pueden dark warn a Todo usuario<br />" +
+			"% <b>Driver</b> - Pueden dar warn a Todo usuario<br />" +
 			"@ <b>Moderator</b> - Pueden darle ban a un Usuario<br />" +
-			"\u2605 <b>Player</b> - Especial rank only for battles. They can put the modchat and promote to room voiced<br />" +
-			"&amp; <b>Leader</b> - The above, and they can promote to moderator and force ties<br />" +
-			"# <b>Room Owner</b> - They are leaders of the room and can almost totally control it<br />" +
-			"~ <b>Administrator</b> - They can do anything, like change what this message says"
+			"\u2605 <b>Player</b> - Rango especial que sirve en las Salas de Batalla<br />" +
+			"&amp; <b>Leader</b> - Supervisa la actividad de los miembros del Staff y guía a los nuevos integrantes.<br />" +
+			"# <b>Room Owner</b> - Este rango no es Global, pero es el rango mas alto para las Salas<br />" +
+			"~ <b>Administrator</b> - Pueden Hacer todo lo anterior y mucho mas"
 		);
 	},
 	groupshelp: ["/groups - Explains what the + % @ # & next to people's names mean.",
