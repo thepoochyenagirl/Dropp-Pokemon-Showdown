@@ -63,7 +63,7 @@ exports.commands = {
 		if (!params) return this.sendReply("Usage: /buy object");
 		var article = toId(params[0]);
 		switch (article) {
-			case 'trainer card':
+			case 'trainercard':
 				prize = 5000;
 				if (Shop.getUserMoney(user.name) < prize) return this.sendReply("No tienes suficiente dinero.");
 				var tcUser = Shop.getTrainerCard(user.name);
@@ -119,7 +119,7 @@ exports.commands = {
 				Shop.removeMoney(user.name, prize);
 				return this.sendReply("Has comprado el permiso para usar los comandos /customsymbol y /resetsymbol. Para más información consulta /shophelp.");
 				break;
-			case 'cambio de avatar':
+			case 'cambiodeavatar':
 				prize = 1500;
 				if (Shop.getUserMoney(user.name) < prize) return this.sendReply("No tienes suficiente dinero.");
 				if (!Config.customavatars[user.userid]) return this.sendReply("No tenías un avatar personalizado.");
