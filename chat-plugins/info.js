@@ -1772,10 +1772,10 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox("<a href=\"https://www.smogon.com/sim/staff_list\">Pok&eacute;mon Showdown Staff List</a>");
 	},
-
+	forums: "Foro"
 	foro: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox("<a href=\"http://dropp.boards.net/">Pok&eacute;mon Showdown Forums</a>");
+		this.sendReplyBox("<a href=\"http://dropp.boards.net/">Foro del Servidor Dropp</a>");
 	},
 
 	suggestions: function (target, room, user) {
