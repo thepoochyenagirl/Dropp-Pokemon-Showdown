@@ -1736,17 +1736,17 @@ var commands = exports.commands = {
 	grupos: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(
-			"$ <b>Destacado</b> - Pueden usar Comandos con ! como !gropus<br />" +
-			"+ <b>Voice</b> - Pueden hacer /newtour, pueden entrar a una sala de batalla y hablar durante la charla moderada <br />" +
+			"$ <b>Destacado</b> - Pueden usar Comandos con ! como !grupos<br />" +
+			"+ <b>Vocero</b> - Pueden hacer /newtour, pueden entrar a una sala de batalla y hablar durante la charla moderada <br />" +
 			"\u262A <b>League Champion</b> - Este rango se le otorga al Campeon de la Liga Dropp<br />" +
-			"\u2295 <b>Operator</b> - Pueden crear y Administrar Torneos<br />" +
-			"\u00A5 <b>Youtuber</b> - Pude darle warn a<br />" +
-			"% <b>Driver</b> - Pueden dar warn a Todo usuario<br />" +
+			"\u2295 <b>Operador</b> - Pueden crear y Administrar Torneos<br />" +
+			"\u00A5 <b>Youtuber</b> - Pude darle warn a un Usuario<br />" +
+			"% <b>Driver</b> - Pueden dar warn a Todo usuario y acceder al Modlog<br />" +
 			"@ <b>Moderator</b> - Pueden darle ban a un Usuario<br />" +
 			"\u2605 <b>Player</b> - Rango especial que sirve en las Salas de Batalla<br />" +
 			"&amp; <b>Leader</b> - Supervisa la actividad de los miembros del Staff y guía a los nuevos integrantes.<br />" +
 			"# <b>Room Owner</b> - Este rango no es Global, pero es el rango mas alto para las Salas<br />" +
-			"~ <b>Administrator</b> - Pueden Hacer todo lo anterior y mucho mas"
+			"~ <b>Administrador</b> - Pueden Hacer todo lo anterior y mucho mas"
 		);
 	},
 	groupshelp: ["/groups - Explains what the + % @ # & next to people's names mean.",
