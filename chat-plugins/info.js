@@ -1733,7 +1733,9 @@ var commands = exports.commands = {
 		this.sendReplyBox("Uptime: <b>" + uptimeText + "</b>");
 	},
 
-	grupos: function (target, room, user) {
+	rangos: 'groups',
+	grupos: 'groups',
+	groups: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox(
 			"$ <b>Destacado</b> - Pueden usar Comandos con ! como !grupos<br />" +
@@ -1772,10 +1774,11 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox("<a href=\"https://www.smogon.com/sim/staff_list\">Pok&eacute;mon Showdown Staff List</a>");
 	},
-	forums: "Foro"
+
+	forums: 'foro',
 	foro: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox("<a href=\"http://dropp.boards.net/">Foro del Servidor Dropp</a>");
+		this.sendReplyBox("<a href=\"http://dropp.boards.net/\">Foro del Servidor Dropp</a>");
 	},
 
 	suggestions: function (target, room, user) {
