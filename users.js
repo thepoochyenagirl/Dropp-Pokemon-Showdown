@@ -431,7 +431,9 @@ function cacheGroupData() {
 			cachedGroups[sym] = 'processing';
 			var inheritGroup = groups[groupData['inherit']];
 			if (cacheGroup(groupData['inherit'], inheritGroup)) {
-				Object.merge(groupData, inheritGroup, false, false);
+				for (var t in inheritGroup) {
+					if (!groupData[t] && t !== 'globalonly' && t !== 'roomonly') groupData[t] = inheritGroup[t];
+				}
 			}
 			delete groupData['inherit'];
 		}
