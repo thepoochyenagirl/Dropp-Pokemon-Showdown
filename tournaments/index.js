@@ -726,7 +726,7 @@ Tournament = (function () {
 			format: this.format,
 			generator: this.generator.name,
 			bracketData: this.getBracketData()
-		}));  if (global.Shop) {var data = {results: this.generator.getResults().map(usersToNames), bracketData: this.getBracketData()};data = data['results'].toString();var runnerUp = false;var winner = false; if (data.indexOf(',') >= 0) {data = data.split(','); winner = data[0]; if (this.room.id === 'casino' && Users.get(Bot.config.name)) CommandParser.parse('/endtourbets ' + winner, this.room, Users.get(Bot.config.name), Users.get(Bot.config.name).connections[0]); if (data[1]) runnerUp = data[1];} else {winner = data;} var tourSize = this.generator.users.size;if (this.room.isOfficial && tourSize >= 3) {firstMoney = tourSize * 20;secondMoney = Math.floor((tourSize * 20) / 2); firstBuck = 'PokeDolar';secondBuck = 'PokeDolar'; if (firstMoney > 1) firstBuck = 'PokeDolares'; if (secondMoney > 1) secondBuck = 'PokeDolares'; Shop.giveMoney(winner, firstMoney); this.room.add('|raw|<strong>' + Tools.escapeHTML(winner) + '</strong> ha ganado ' + firstMoney + ' ' + firstBuck + ' por ganar el torneo!'); if (runnerUp) { Shop.giveMoney(runnerUp, secondMoney); this.room.add('|raw|<strong>' + Tools.escapeHTML(runnerUp) + '</strong> tambiÈn ha ganado ' + secondMoney + ' ' + secondBuck + ' por quedar en segundo lugar!');}}}
+		}));  if (global.Shop) {var data = {results: this.generator.getResults().map(usersToNames), bracketData: this.getBracketData()};data = data['results'].toString();var runnerUp = false;var winner = false; if (data.indexOf(',') >= 0) {data = data.split(','); winner = data[0]; if (this.room.id === 'casino' && Users.get(Bot.config.name)) CommandParser.parse('/endtourbets ' + winner, this.room, Users.get(Bot.config.name), Users.get(Bot.config.name).connections[0]); if (data[1]) runnerUp = data[1];} else {winner = data;} var tourSize = this.generator.users.size;if (this.room.isOfficial && tourSize >= 3) {firstMoney = tourSize * 20;secondMoney = Math.floor((tourSize * 20) / 2); firstBuck = 'PokeDolar';secondBuck = 'PokeDolar'; if (firstMoney > 1) firstBuck = 'PokeDolares'; if (secondMoney > 1) secondBuck = 'PokeDolares'; Shop.giveMoney(winner, firstMoney); this.room.add('|raw|<strong>' + Tools.escapeHTML(winner) + '</strong> ha ganado ' + firstMoney + ' ' + firstBuck + ' por ganar el torneo!'); if (runnerUp) { Shop.giveMoney(runnerUp, secondMoney); this.room.add('|raw|<strong>' + Tools.escapeHTML(runnerUp) + '</strong> tambi√©n ha ganado ' + secondMoney + ' ' + secondBuck + ' por quedar en segundo lugar!');}}}
 		this.isEnded = true; 
 		delete exports.tournaments[toId(this.room.id)];
 	};
@@ -796,7 +796,7 @@ var commands = {
 		begin: 'start',
 		start: function (tournament, user) {
 			if (tournament.startTournament(this)) {
-				this.sendModCommand("(" + user.name + " started the tournament.)");
+				this.sendModCommand("(" + user.name + " Inicio el Torneo.)");
 			}
 		}
 	},
@@ -811,7 +811,7 @@ var commands = {
 				return this.sendReply("User " + params[0] + " not found.");
 			}
 			if (tournament.disqualifyUser(targetUser, this)) {
-				this.privateModCommand("(" + targetUser.name + " was disqualified from the tournament by " + user.name + ")");
+				this.privateModCommand("(" + targetUser.name + " a sido descalificado del torneo por " + user.name + ")");
 			}
 		},
 		autostart: 'setautostart',
@@ -843,7 +843,7 @@ var commands = {
 		stop: 'delete',
 		delete: function (tournament, user) {
 			if (deleteTournament(tournament.room.title, this)) {
-				this.privateModCommand("(" + user.name + " forcibly ended a tournament.)");
+				this.privateModCommand("(" + user.name + " El Torneo a sido cancelado.)");
 			}
 		}
 	}
