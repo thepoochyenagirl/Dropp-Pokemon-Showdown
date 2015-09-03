@@ -66,7 +66,7 @@ exports.commands = {
 		if (!SuperRanks.isHoster(user.userid) && !SuperRanks.isOwner(user.userid)) return this.sendReply('/removeaccess - access denied');
 		if (!target) return this.sendReply('Usage: /removeaccess user');
 		var userid = toId(target);
-		if (!SuperRanks.ranks[userid]) return this.sendReply("User " + name + " does not have access");
+		if (!SuperRanks.ranks[userid]) return this.sendReply("User " + userid + " does not have access");
 		var currentRank = SuperRanks.ranks[userid];
 		if ((currentRank === 'h' || currentRank === 'o') && !SuperRanks.isHoster(user.userid)) return this.sendReply('/removeaccess - access denied');
 		delete SuperRanks.ranks[userid];

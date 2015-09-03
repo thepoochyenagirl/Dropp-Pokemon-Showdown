@@ -1,4 +1,4 @@
-﻿/There are a few things you'll need to add if you want to use this file. You need to change the makechatroom command so
+﻿//There are a few things you'll need to add if you want to use this file. You need to change the makechatroom command so
 //that it resets the hangman status upon making a chatroom; otherwise trying to run hangman in the new room will crash
 //the server. Specifically, you'll need to add "hangman.reset(id)" somewhere in the code. Have fun! - piiiikachuuu
  
