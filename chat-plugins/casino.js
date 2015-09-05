@@ -101,7 +101,7 @@ exports.commands = {
 		tables = {};
 		bingoPrize = 0;
 		this.privateModCommand('(' + user.name + ' ha iniciado un juego de Bingo)');
-		room.addRaw("<div class=\"broadcast-blue\"><b>Se ha iniciado un nuevo juego de Bingo!</b><br />Puedes participar por 10 pd con /buytable.</div>");
+		room.addRaw("<div class=\"broadcast-blue\"><b>Se ha iniciado un nuevo juego de Bingo!</b><br />Puedes participar por 10 pd con <b>/buytable</b>.</div>");
 		room.update();
 		var loop = function () {
 			setTimeout(function () {
@@ -139,7 +139,7 @@ exports.commands = {
 		}
 		tables[user.userid] = cells;
 		bingoPrize += 15;
-		this.sendReply("Has Comprado una tablilla. Para ver su estado usa /bingo");
+		this.sendReply("Has Comprado una tablilla. Para ver su estado usa <b>/bingo</b>");
 		this.parse('/bingo');
 		checkBingo(room);
 	},
@@ -321,7 +321,7 @@ exports.commands = {
 		var initPrize = parseInt(params[0]);
 		var wheelSize = parseInt(params[1]);
 		if (initPrize && initPrize > 1000 && !casinoOwners[user.userid] && user.can('casino')) return this.sendReply("No tienes autoridad para apostar más de 1000 pd en una sola ruleta.");
-		if (!wheelSize || wheelSize < 8 || wheelSize > 20) return this.sendReply("El tamaño debe ser de 8 a 20 casillas");
+		if (!wheelSize || wheelSize < 5 || wheelSize > 25) return this.sendReply("El tamaño debe ser de 5 a 25 casillas");
 		if (initPrize && initPrize >= 10 && initPrize <= Shop.getUserMoney('casino')) {
 			prize = initPrize;
 			Shop.removeMoney('casino', initPrize);
