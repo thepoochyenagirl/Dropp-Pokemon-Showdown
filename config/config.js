@@ -239,6 +239,7 @@ exports.grouplist = [
 		id: "leader",
 		name: "Leader",
 		inherit: '@',
+		clans:true,
 		jurisdiction: '@u',
 		promote: 'u',
 		forcewin: true,
