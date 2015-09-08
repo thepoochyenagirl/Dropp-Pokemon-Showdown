@@ -230,14 +230,14 @@ exports.grouplist = [
 	{
 		symbol: '~',
 		id: "admin",
-		name: "Administrator",
+		name: "Administrador",
 		root: true,
 		globalonly: true
 	},
 	{
 		symbol: '&',
 		id: "leader",
-		name: "Leader",
+		name: "Líder",
 		inherit: '@',
 		clans:true,
 		jurisdiction: '@u',
@@ -255,7 +255,7 @@ exports.grouplist = [
 	{
 		symbol: '#',
 		id: "owner",
-		name: "Jefe de Salar",
+		name: "Jefe de Sala",
 		inherit: '@',
 		jurisdiction: 'u',
 		roommod: true,
@@ -272,6 +272,7 @@ exports.grouplist = [
 		inherit: '+',
 		roomvoice: true,
 		modchat: true,
+		declare: true,
 		roomonly: true,
 		privateroom: true,
 		joinbattle: true
@@ -324,7 +325,7 @@ exports.grouplist = [
 	{
 		symbol: '\u2295',
 		id: "operator",
-		name: "Operator",
+		name: "Operador",
 		inherit: '\u262A',
 		tournamentsmoderation: true,
 		tournaments: true
