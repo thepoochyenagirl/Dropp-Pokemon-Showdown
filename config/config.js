@@ -254,7 +254,7 @@ exports.grouplist = [
 	{
 		symbol: '#',
 		id: "owner",
-		name: "Room Owner",
+		name: "Jefe de Salar",
 		inherit: '@',
 		jurisdiction: 'u',
 		roommod: true,
@@ -267,7 +267,7 @@ exports.grouplist = [
 	{
 		symbol: '\u2605',
 		id: "player",
-		name: "Player",
+		name: "Jugador",
 		inherit: '+',
 		roomvoice: true,
 		modchat: true,
@@ -278,7 +278,7 @@ exports.grouplist = [
 	{
 		symbol: '@',
 		id: "mod",
-		name: "Moderator",
+		name: "Moderador",
 		inherit: '%',
 		jurisdiction: 'u',
 		ban: true,
@@ -292,7 +292,7 @@ exports.grouplist = [
 	{
 		symbol: '%',
 		id: "driver",
-		name: "Driver",
+		name: "Conductor",
 		inherit: '\u2295',
 		jurisdiction: 'u',
 		announce: true,
@@ -331,14 +331,14 @@ exports.grouplist = [
 	{
 		symbol: '\u262A',
 		id: "leaguechampion",
-		name: "League Champion",
+		name: "Campeon de la Liga",
 		inherit: '+',
 		globalonly: true
 	},
 	{
 		symbol: '+',
 		id: "voice",
-		name: "Voice",
+		name: "Vocero",
 		inherit: '$',
 		joinbattle: true,
 		broadcast: true
