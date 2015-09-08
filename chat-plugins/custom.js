@@ -24,6 +24,12 @@ exports.commands = {
 		connection.popup(buffer.join("\n\n"));
 	},*/
 	
+	plugdj: function () {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<div class="infobox"><center><a href="http://plug.dj/pokemon-hispano-3/"><img src="http://i.imgur.com/2olrf6c.gif" height="100" width="100"></a><br><font size=3><b><font color="blue">Radio del Servidor Dropp');");
+	
+	},
+	
 	postimage: 'image',
 	image: function (target, room, user) {
 		if (!target) return this.sendReply('Usage: /image link, size');
