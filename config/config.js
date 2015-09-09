@@ -335,7 +335,6 @@ exports.grouplist = [
 		id: "leaguechampion",
 		name: "Campeon de la Liga",
 		inherit: '+',
-		globalonly: true
 	},
 	{
 		symbol: '+',
