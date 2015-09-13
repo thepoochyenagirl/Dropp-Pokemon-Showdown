@@ -9,7 +9,7 @@ exports.commands = {
 	shop: function (target, room, user) {
 		if (!this.canBroadcast()) return false;
 		this.sendReplyBox(
-			'<center><h3><b><u>Bienvenido a la Tienda del servidor Dropp</u></b></h3><table border="1" cellspacing="0" cellpadding="3" target="_blank"><tbody>' +
+			'<center><h3><b><u>Bienvenido a la Tienda del servidor Eternity</u></b></h3><table border="1" cellspacing="0" cellpadding="3" target="_blank"><tbody>' +
 			'<tr><th>Art&iacute;culo</th><th>Descripci&oacute;n</th><th>Coste</th></tr>' +
 			'<tr><td>Chatroom</td><td>Compra una Sala de chat. Será pública o privada en función del motivo de su compra. Si se detecta spam u Otros contenidos inapropiados a ella , sera Borrada.</td><td>10000</td></tr>' +
                         '<tr><td>Avatar</td><td>Compra un avatar personalizado. Preferiblemente debe ser una imagen de pequeñas dimensiones y acorde a las reglas del servidor. Contactar con un Admin para obtener este art&iacute;culo.</td><td>8000</td></tr>' +
